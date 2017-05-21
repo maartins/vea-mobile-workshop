@@ -23,4 +23,14 @@
 
 
 Given /^I am on intro screen$/ do
+    if $driver.find_elements(:xpath, '//android.widget.Button[contains(@text, "OK")]').size > 0
+        $driver.find_element(:xpath, '//android.widget.Button[contains(@text, "OK")]').click
+    end
+    @screens.screen_intro.visible?
+end
+
+
+Given /^I create property filter$/ do
+    @tests.test_add_filter.close_intro
+    @tests.test_add_filter.open_filter_parameter_screen
 end
