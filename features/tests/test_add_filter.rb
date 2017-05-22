@@ -18,7 +18,6 @@ class TestAddFilter
   end
 
    def select_sub_category(sub_cat_hash)
-    sleep(0.2)
     @screens.screen_select_sub_category.visible?(sub_cat_hash['title'])
     @screens.screen_select_sub_category.select_sub_category(
       sub_cat_hash['option']
