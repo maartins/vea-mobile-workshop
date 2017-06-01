@@ -1,25 +1,43 @@
-property_positive:
-  name: 'Filter 1'
-  category: 'Nekustamie īpašumi'
+transport_negative:
+  name: 'Transports - negative'
+  category: 'Transports'
   sub_categories:
     - sub_category:
-      title: 'Nekustamie īpašumi'
-      option: 'Zeme'
+      title: 'Transports'
+      option: 'Vieglie auto'
     - sub_category:
-      title: 'Zeme'
-      option: 'Ventspils un rajons'
+      title: 'Vieglie auto'
+      option: 'Audi'
     - sub_category:
-      title: 'Ventspils un rajons'
-      option: 'Visi'
+      title: 'Audi'
+      option: 'Audi A4'
     - sub_category:
       title: 'Darbība'
-      option: 'Visi'
+      option: 'Pārdod'
+  parameters: []
+
+transport_positive:
+  name: 'Transports - positive'
+  category: 'Transports'
+  sub_categories:
+    - sub_category:
+      title: 'Transports'
+      option: 'Vieglie auto'
+    - sub_category:
+      title: 'Vieglie auto'
+      option: 'Audi'
+    - sub_category:
+      title: 'Audi'
+      option: 'Audi A4'
+    - sub_category:
+      title: 'Darbība'
+      option: 'Pārdod'
   parameters:
+    - parameter:
+      name: 'NOSAUKUMS'
+      left: 'labs'
+      right: ''
     - parameter:
       name: 'CENA (EUR)'
       left: '1'
       right: '1000'
-    - parameter:
-      name: 'PLATĪBA (M2)'
-      left: '1'
-      right: '3000'

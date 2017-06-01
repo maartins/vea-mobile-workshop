@@ -22,15 +22,32 @@
 # https://www.relishapp.com/rspec/rspec-expectations/docs
 
 
-Given /^I am on intro screen$/ do
+Given /^I swipe intro screen$/ do
     if $driver.find_elements(:xpath, '//android.widget.Button[contains(@text, "OK")]').size > 0
         $driver.find_element(:xpath, '//android.widget.Button[contains(@text, "OK")]').click
     end
-    @screens.screen_intro.visible?
+    @tests.test_intro.swipe_intro
 end
 
+Given /^I close intro screen$/ do
+    if $driver.find_elements(:xpath, '//android.widget.Button[contains(@text, "OK")]').size > 0
+        $driver.find_element(:xpath, '//android.widget.Button[contains(@text, "OK")]').click
+    end
+    @tests.test_intro.close_intro
+end
 
-Given /^I create property filter$/ do
-    @tests.test_add_filter.close_intro
+Given /^I create empty filter$/ do
+    @tests.test_add_filter.set_filter('transport_negative')
     @tests.test_add_filter.open_filter_parameter_screen
+    @tests.test_add_filter.input_filter_parameters
+end
+
+Given /^I close buy filter screen$/ do
+    @tests.test_buy_filter.close_buy_filter
+end
+
+Given /^I create filter with name and price$/ do
+    @tests.test_add_filter.set_filter('transport_positive')
+    @tests.test_add_filter.open_filter_parameter_screen
+    @tests.test_add_filter.input_filter_parameters
 end

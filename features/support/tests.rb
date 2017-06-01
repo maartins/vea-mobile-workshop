@@ -8,7 +8,12 @@ class Tests
     @test_intro
   end
 
-    def test_add_filter
+  def test_buy_filter
+    @test_buy_filter ||= TestBuyFilter.new(@screens)
+    @test_buy_filter
+  end
+
+  def test_add_filter
     @test_add_filter ||= TestAddFilter.new(@screens)
     @test_add_filter
   end

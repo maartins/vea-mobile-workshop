@@ -17,4 +17,14 @@ class Screens
     @screen_select_sub_category ||= ScreenSelectSubcategory.new @driver
     @screen_select_sub_category
   end
+
+  def screen_input_parameters
+    @screen_input_parameters ||= ScreenInputParameters.new @driver
+    @screen_input_parameters
+  end
+
+  def screen_buy_filter
+    @screen_buy_filter ||= ScreenBuyFilter.new @driver
+    @screen_buy_filter
+  end
 end

@@ -11,8 +11,11 @@ class Filter
       @sub_categories.push sub_cat
     end
     @parameters = []
-    config['parameters'].each do |parameter|
-      @parameters.push parameter
+    if config['parameters'].size > 0
+      print "------------------------------------------------------------------------------"
+      config['parameters'].each do |parameter|
+        @parameters.push parameter
+      end 
     end
   end
 
